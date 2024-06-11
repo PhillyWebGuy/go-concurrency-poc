@@ -7,11 +7,17 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+	"v2/internal/initializers"
 
 	"github.com/gin-gonic/gin"
 )
 
+func init() {
+	initializers.LoadEnvVariables()
+}
+
 func main() {
+
 	//This creates a new Gin router with default middleware: logger and recovery (crash-free) middleware.
 	r := gin.Default()
 
@@ -19,13 +25,13 @@ func main() {
 	//the server responds with a JSON object: {"message": "ping pang pung wut up dawg"}.
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"message": "ping pang pung wut up dawg",
+			"message": "wut up dawg",
 		})
 	})
 
 	//This creates a new HTTP server on port 8080 with the Gin router as the handler.
 	srv := &http.Server{
-		Addr:    ":8080",
+		Addr:    ":" + os.Getenv("PORT"),
 		Handler: r,
 	}
 
