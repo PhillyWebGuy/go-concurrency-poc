@@ -7,11 +7,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func init() {
-	initializers.LoadEnvVariables()
-}
-
 func main() {
+
+	//This line reads the .env file and loads the environment variables into the system.
+	initializers.LoadEnvVariables()
 
 	//This creates a new Gin router with default middleware: logger and recovery (crash-free) middleware.
 	r := gin.Default()

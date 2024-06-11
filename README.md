@@ -10,9 +10,15 @@ The purpose of this POC is to demonstrate the use of:
 
 # Starting the Application
 
-cmd/http/CompileDaemon -build="go build ./main.go" -command="./main"
+Run this command:
 
-Point your browser: http://localhost:8080
+go install github.com/air-verse/air@latest
+
+Run command to utilized air
+
+air
+
+Point your browser: http://localhost:3000
 
 # Branches / Milestones
 
@@ -25,4 +31,4 @@ This contains the commits that do the following:
 - Add Gorm support
 - Add Gin
 - Add godotenv
-- Add CompileDaemon
+- Add Air
