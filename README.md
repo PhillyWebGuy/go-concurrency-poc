@@ -2,21 +2,27 @@
 
 The purpose of this POC is to demonstrate the use of:
 
-- CompileDaemon
-- GIN
+- Air
+- Gin
 - REST API that consumes and produces JSON
 - Gorm
 - Concurrency
 
 # Starting the Application
 
-Run this command:
+Create a `.env` file in the root, and include this:
 
-go install github.com/air-verse/air@latest
+`
+PORT=3000
+`
 
-Run command to utilized air
+Run this command from a terminal:
 
-air
+`go install github.com/air-verse/air@latest`
+
+Run command at top level of project to utilized air
+
+`air`
 
 Point your browser: http://localhost:3000
 
