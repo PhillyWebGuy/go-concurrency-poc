@@ -49,6 +49,7 @@ This contains the commits that do the following:
 
 ## gorm
 
-This containes the commits from previous milestones, plus the following:
+This contains the commits from previous milestones, plus the following:
 
-- Add support for PostgreSQL database
+- Script to initialize Postgres container
+- Creation of makefile to start/stop db container, start Gin
