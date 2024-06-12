@@ -14,6 +14,9 @@ Create a `.env` file in the root, and include this:
 
 `
 PORT=3000
+DATABASE_PASSWORD=password
+DATABASE_USER=user 
+DATABASE_NAME=database
 `
 
 In addition to haveing Go and Docker/Rancher installed, you will also need Air.
