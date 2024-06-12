@@ -14,15 +14,26 @@ Create a `.env` file in the root, and include this:
 
 `
 PORT=3000
+DATABASE_PASSWORD=password
+DATABASE_USER=user 
+DATABASE_NAME=database
 `
 
-Run this command from a terminal:
+In addition to haveing Go and Docker/Rancher installed, you will also need Air.
+
+If you don't know what Air is, or have it installed, run this command from a terminal:
 
 `go install github.com/air-verse/air@latest`
 
-Run command at top level of project to utilized air
+Now you should be ready to run your application.
 
-`air`
+First, run the PostgreSQL database by executing this command from the root of the project:
+
+`make up`
+
+Then, run the web server:
+
+`make http`
 
 Point your browser: http://localhost:3000
 
@@ -38,3 +49,10 @@ This contains the commits that do the following:
 - Add Gin
 - Add godotenv
 - Add Air
+
+## gorm
+
+This contains the commits from previous milestones, plus the following:
+
+- Script to initialize Postgres container
+- Creation of makefile to start/stop db container, start Gin
