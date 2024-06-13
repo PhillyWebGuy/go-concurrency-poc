@@ -50,7 +50,7 @@ This contains the commits that do the following:
 - Add godotenv
 - Add Air
 
-## gorm
+## postgres
 
 This contains the commits from previous milestones, plus the following:
 
