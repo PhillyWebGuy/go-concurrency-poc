@@ -13,10 +13,17 @@ The purpose of this POC is to demonstrate the use of:
 Create a folder named `.local` at the root, then create a `.env` file and place in that folder. Include this in the file:
 
 `
-PORT=3000
+ENV=DEV
+
 DATABASE_PASSWORD=password
 DATABASE_USER=user 
 DATABASE_NAME=database
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_CONNECTION_RETRY=5
+
+HTTP_PORT=:3001
+HTTP_DOMAIN=localhost
 `
 
 In addition to haveing Go and Docker/Rancher installed, you will also need Air.
@@ -50,16 +57,17 @@ This contains the commits that do the following:
 - Add godotenv
 - Add Air
 
-## gorm
+## postgres
 
 This contains the commits from previous milestones, plus the following:
 
 - Script to initialize Postgres container
 - Creation of makefile to start/stop db container, start Gin
 
-## services
+## infrastructure
 
 This contains the commits from previous milestones, plus the following:
 
 - Refactor of HTTP related code to increase abstraction
 - Make use of viper to load and read configuration
+- Expanded use of .env settings
