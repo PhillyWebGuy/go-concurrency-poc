@@ -71,3 +71,4 @@ This contains the commits from previous milestones, plus the following:
 - Refactor of HTTP related code to increase abstraction
 - Make use of viper to load and read configuration
 - Expanded use of .env settings
+- Introduction of infrastructure as abstraction layer
