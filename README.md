@@ -10,7 +10,7 @@ The purpose of this POC is to demonstrate the use of:
 
 # Starting the Application
 
-Create a `.env` file in the root, and include this:
+Create a folder named `.local` at the root, then create a `.env` file and place in that folder. Include this in the file:
 
 `
 PORT=3000
@@ -56,3 +56,10 @@ This contains the commits from previous milestones, plus the following:
 
 - Script to initialize Postgres container
 - Creation of makefile to start/stop db container, start Gin
+
+## services
+
+This contains the commits from previous milestones, plus the following:
+
+- Refactor of HTTP related code to increase abstraction
+- Make use of viper to load and read configuration

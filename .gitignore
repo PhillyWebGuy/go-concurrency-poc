@@ -26,3 +26,4 @@ cmd/http/main
 tmp/build-errors.log
 tmp/main
 .env
+.local
