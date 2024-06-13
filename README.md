@@ -75,3 +75,10 @@ This contains the commits from previous milestones, plus the following:
 - Make use of viper to load and read configuration
 - Expanded use of .env settings
 - Introduction of infrastructure as abstraction layer
+
+## services
+
+- Connect app to database
+- Introduction of domain abstraction layer
+- Introduction of book service
+- Implement persistence

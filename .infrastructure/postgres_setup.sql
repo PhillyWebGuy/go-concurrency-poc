@@ -1,5 +1,4 @@
-SET
-    search_path TO public;
+SET search_path TO public;
 
 -- Drop the users table if it already exists
 DROP TABLE IF EXISTS books;
