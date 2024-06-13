@@ -1,29 +1,35 @@
 package main
 
 import (
-	"os"
-	"v2/internal/initializers"
+	"log"
 
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
+	RunHTTP()
+}
 
-	//This line reads the .env file and loads the environment variables into the system.
-	initializers.LoadEnvVariables()
+func RunHTTP() {
 
-	//This creates a new Gin router with default middleware: logger and recovery (crash-free) middleware.
+	//This calls the mustNewConfiguration function which is expected to return a configuration object.
+	//This object is likely to contain settings for the application, such as the HTTP port to listen on.
+	config := mustNewConfiguration()
+
+	//This line creates a new Gin engine with the default middleware: logger and recovery (crash-free) middleware.
 	r := gin.Default()
 
-	//defines a route handler for HTTP GET requests to the root ("/") URL. When someone accesses the root URL,
+	//This defines a route handler for HTTP GET requests to the root ("/") URL. When someone accesses the root URL,
 	//the server responds with a JSON object: {"message": "ping pang pung wut up dawg"}.
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"message": "wut up dawg",
+			"message": "ping pang pung wut up dawg",
 		})
 	})
 
-	//This line starts the server on port env port. The server will listen for incoming requests and respond to them.
-	r.Run(":" + os.Getenv("PORT"))
-
+	//This line starts the HTTP server on the port specified in the configuration and listens for requests.
+	//If the server fails to start, it will log the error and exit the program.
+	//The log.Fatal function is used to print the error message and stop the execution of the program
+	//if the r.Run function returns an error.
+	log.Fatal(r.Run(config.HTTP.Port))
 }
