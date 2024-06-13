@@ -12,7 +12,7 @@ The purpose of this POC is to demonstrate the use of:
 
 Create a folder named `.local` at the root, then create a `.env` file and place in that folder. Include this in the file:
 
-`
+```
 ENV=DEV
 
 DATABASE_PASSWORD=password
@@ -24,7 +24,7 @@ DATABASE_CONNECTION_RETRY=5
 
 HTTP_PORT=:3001
 HTTP_DOMAIN=localhost
-`
+```
 
 In addition to haveing Go and Docker/Rancher installed, you will also need Air.
 
@@ -45,6 +45,9 @@ Then, run the web server:
 Point your browser: http://localhost:3000
 
 # Branches / Milestones
+
+In order to understand how to build out the complete project, which is merged into develop, follow the evolution
+of the repo buy reviewing each branch/milestone in the following order.
 
 ## setup
 
