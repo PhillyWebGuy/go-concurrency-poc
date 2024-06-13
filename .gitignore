@@ -19,3 +19,11 @@
 
 # Go workspace file
 go.work
+cmd/http/http
+cmd/http/v2
+cmd/.DS_Store
+cmd/http/main
+tmp/build-errors.log
+tmp/main
+.env
+.local
