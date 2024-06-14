@@ -82,3 +82,8 @@ This contains the commits from previous milestones, plus the following:
 - Introduction of domain abstraction layer
 - Introduction of book service
 - Implement persistence
+- Produce an actual working service
+
+## business-logic
+
+- Abstract business logic from infrastructure

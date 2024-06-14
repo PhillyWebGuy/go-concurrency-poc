@@ -8,10 +8,6 @@ import (
 	"gorm.io/gorm"
 )
 
-type Database struct {
-	Session *gorm.DB
-}
-
 // MustNewDatabase Establish database connection and migrate tables before
 // returning database.Database struct.
 func MustNewDatabase(d gorm.Dialector, gc gorm.Config, retryTimes int) Database {

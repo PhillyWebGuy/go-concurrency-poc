@@ -10,6 +10,12 @@ import (
 	"go-concurrency-poc/internal/domain/entity"
 )
 
+type Database struct {
+	Session *gorm.DB
+}
+
+//The actual implementation of the entity interfaces in the infrastructure layer.
+
 func (db Database) ListBooks() ([]entity.Book, error) {
 	var books []entity.Book
 	err := db.Session.Find(&books).Error
