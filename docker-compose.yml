@@ -1,6 +1,9 @@
+
+version: '3.9'
+
 services:
   postgres:
-    image: postgres:alpine
+    image: postgres
     restart: always
     environment:
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
@@ -9,9 +12,9 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - postgres-db:/var/lib/postgresql/data
+      - postgresql-db:/var/lib/postgresql/data
       - ./.infrastructure/postgres_setup.sql:/docker-entrypoint-initdb.d/postgres_setup.sql
     command: ["postgres", "-c", "log_statement=all"]
 
 volumes:
-  postgres-db:
+  postgresql-db:

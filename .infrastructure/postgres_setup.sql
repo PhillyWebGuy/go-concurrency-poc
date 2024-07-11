@@ -1,5 +1,4 @@
-SET
-    search_path TO public;
+SET search_path TO public;
 
 -- Drop the users table if it already exists
 DROP TABLE IF EXISTS books;
@@ -18,10 +17,8 @@ VALUES
     ('The Art of War'),
     ('The Prince'),
     ('The Republic'),
-    ('The Wealth of Nations');
+    ('The Wealth of Nations'),
+    ('The 48 Laws of Power');
 
 -- Select all records to verify the insertion
-SELECT
-    *
-FROM
-    books;
+SELECT * FROM books;

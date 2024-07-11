@@ -1,2 +1,8 @@
 ###
-GET http://localhost:3000/
+GET http://localhost:3001/health-check
+
+###
+GET http://localhost:001/book
+
+###
+GET http://localhost:001/book/1
