@@ -42,7 +42,10 @@ Then, run the web server:
 
 `make http`
 
-Point your browser: http://localhost:3000
+Point your browser: 
+
+- http://localhost:3001
+- http://localhost:3001/book/1
 
 # Branches / Milestones
 

@@ -4,18 +4,14 @@ import (
 	"fmt"
 
 	"go-concurrency-poc/internal/domain/entity"
+	"go-concurrency-poc/internal/domain/repository"
 )
 
-type databaseSession interface {
-	ListBooks() ([]entity.Book, error)
-	FetchBook(ID int) (entity.Book, error)
-}
-
 type Service struct {
-	Database databaseSession
+	Database repository.BookRepository
 }
 
-func NewService(db databaseSession) Service {
+func NewService(db repository.BookRepository) Service {
 	return Service{Database: db}
 }
 
